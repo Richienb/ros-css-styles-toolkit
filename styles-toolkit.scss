@@ -1,39 +1,47 @@
+// Hide element
 .hide {
     display: none;
 }
 
+// Remove link underline
 .no-decor {
     text-decoration: none;
 }
 
+// Invert colours
 .invert {
     background-color: black;
     color: white;
 }
 
+// Center in middle
 .center-x {
     margin-left: auto;
     margin-right: auto;
 }
 
+// Remove all outlines
 .no-out {
     margin: 0;
     padding: 0;
     border: 0;
 }
 
+// Setup body element
 .setup {
     position: relative;
     margin: 0;
     min-height: 100vh;
 }
 
+// Hightlight focused element
 .highlight-focus * {
     border-style: solid;
     border-width: 5px;
     border-color: red;
 }
 
-.hide-visited a:visited {
+// Hide the visited link colour
+.hide-visited:visited {
     color: #0000EE;
 }
