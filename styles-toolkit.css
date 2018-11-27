@@ -33,3 +33,7 @@
     border-width: 5px;
     border-color: red;
 }
+
+.hide-visited a:visited {
+    color: #0000EE;
+}
