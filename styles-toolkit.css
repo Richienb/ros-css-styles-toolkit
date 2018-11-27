@@ -5,3 +5,8 @@
 .no-decor {
     text-decoration: none;
 }
+
+.invert {
+    background-color: black;
+    color: white;
+}
