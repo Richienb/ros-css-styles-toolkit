@@ -10,3 +10,8 @@
     background-color: black;
     color: white;
 }
+
+.center-x {
+    margin-left: auto;
+    margin-right: auto;
+}
