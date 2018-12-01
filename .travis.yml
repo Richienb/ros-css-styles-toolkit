@@ -11,3 +11,6 @@ install:
 script:
 	- npx node-sass --output-style compressed --source-map true --follow --output dist src
     - npx sassdoc src
+    
+after_script:
+    - ls -1
