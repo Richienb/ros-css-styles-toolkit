@@ -1,70 +1,218 @@
-// Hide element
+/// Hide something
+/// @group layout
 .hide {
     display: none;
 }
 
-// Remove link underline
+/// Remove the underline of a link
+/// @group formatting
 .no-decor {
     text-decoration: none;
 }
 
-// Invert colours
+/// Invert colours
+/// @group formatting
 .invert {
     background-color: black;
     color: white;
 }
 
-// Center in middle for x axis
+/// Center in middle for x axis
+/// @group layout
 .center-x {
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     position: absolute;
 }
 
-// Center in middle for y axis
+/// Center in middle for y axis
+/// @group layout
 .center-y {
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     position: absolute;
 }
 
-// Remove all outlines
+/// Align text in the center of the parent
+/// @group layout
+.align-center {
+    text-align: center;
+}
+
+/// Remove all outlines
+/// @group formatting
 .no-out {
     margin: 0;
     padding: 0;
     border: 0;
 }
 
-// Setup body element
+/// Setup body element
+/// @group layout
 .setup {
+    min-height: 100vh;
     position: relative;
     margin: 0;
-    min-height: 100vh;
 }
 
-// Highlight focused element
+/// Highlight focused element
+/// @group development
+/// @name .highlight-focus
 .highlight-focus *:focus {
     border-style: solid;
     border-width: 5px;
-    border-color: red;
+    border-color: #f44336;
 }
 
-// Hide the visited link colour
+/// Highlight active element
+/// @group development
+/// @name .highlight-active
+.highlight-active *:active {
+    border-style: solid;
+    border-width: 5px;
+    border-color: #f44336;
+}
+
+/// Hide the visited link colour
+/// @group formatting
 .hide-visited:visited {
     color: #0000EE;
 }
 
-// Use rounded corners for the border
+/// Use rounded corners for the border
+/// @group formatting
 .rounded-corners {
     border-radius: 20px;
 }
 
-// Change square border to a circular one
+/// Change square border to a circular one
+/// @group formatting
 .circle-shape {
     border-radius: 50%
 }
 
-// Material Design transition animation
+/// Material Design transition animation
+/// @group material
 .md-transition {
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+
+/// Make icon or svg white
+/// @group formatting
+/// @name .white
+i.white, svg.white {
+    fill: white;
+}
+
+/// Center contents of a div with flexbox
+/// @group layout
+.center-contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/// Set border to red on form validation fail
+/// @group formatting
+/// @name .invalid-border
+form.invalid-border:invalid {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #f44336;
+}
+
+/// Tell the browser that the element changes opacity a lot
+/// @group performance
+.opacity-changes {
+    will-change: opacity;
+}
+
+/// Tell the browser that the element changes transform a lot
+/// @group performance
+.transform-changes {
+    will-change: transform;
+}
+
+/// Material Design borders
+/// @group material
+.md-border {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #bdbdbd;
+    border-radius: 4px;
+}
+
+/// Make the circle in the list outlined
+/// @group formatting
+/// @name .outlined-circle
+ul.outlined-circle {
+    list-style-type: circle;
+}
+
+/// Hide the list icon
+/// @group formatting
+/// @name .no-icon
+ul.no-icon {
+    list-style-type: none;
+}
+
+/// Overflow to the right instead of downwards
+/// @group formatting
+.overflow-right {
+    overflow-x: auto;
+    overflow-y: -webkit-paged-x;
+}
+
+/// Make the element render from the right of the document instead of the left
+/// @group layout
+.start-right {
+    float: right;
+}
+
+/// Make the element flash
+/// @group development
+.flash {
+  animation: blinker 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/// Keyframes to allow the flasher to work
+/// @group redundant
+@keyframes blinker {
+  50% {
+    background-color: #f44336
+  }
+}
+
+/// Get the width of a type of device
+/// @param {text} $device-type - The device type to find the width of
+/// @group data
+/// @throw Invalid device type provided
+@function device-width($device-type){
+    @if $device-type == mobile-s {
+        @return 320px;
+    } @else if $device-type == mobile-m {
+  		@return 375px;
+    } @else if $device-type == mobile-l {
+  		@return 425px;
+    } @else if $device-type == tablet {
+  		@return 768px;
+    } @else if $device-type == laptop {
+  		@return 1024px;
+    } @else if $device-type == laptop-l {
+  		@return 1440px;
+    } @else if $device-type == four-k {
+  		@return 2560px;
+    } @else {
+        @error "Invalid device type provided";
+    }
+}
+
+/// Empty CSS id
+/// @group redundant
+#null {
+}
+
+/// Empty CSS class
+/// @group redundant
+.null {
 }
