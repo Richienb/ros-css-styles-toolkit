@@ -59,6 +59,11 @@
     border-radius: 20px;
 }
 
+// Change square border to a circular one
+.circle-shape {
+    border-radius: 50%
+}
+
 // Material Design transition animation
 .md-transition {
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0s;
