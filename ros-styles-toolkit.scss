@@ -54,6 +54,11 @@
     color: #0000EE;
 }
 
+// Use rounded corners for the border
+.rounded-corners {
+    border-radius: 20px;
+}
+
 // Material Design transition animation
 .md-transition {
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0s;
