@@ -43,7 +43,7 @@
 }
 
 // Highlight focused element
-.highlight-focus * {
+.highlight-focus *:focus {
     border-style: solid;
     border-width: 5px;
     border-color: red;
