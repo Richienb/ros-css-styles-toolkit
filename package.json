@@ -3,20 +3,16 @@
   "name": "ros-css-styles-toolkit",
   "version": "1.0.0",
   "description": "A CSS file that adds shortcuts to css rules.",
-  "main": "ros-styles-toolkit.min.css",
+  "main": "dist/ros-styles-toolkit.min.css",
   "files": [
-    "src/*",
+    "dist/*",
     "README.md"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "cssnano": "^4.1.7",
-    "cssnano-preset-advanced": "^4.0.5",
     "node-sass": "^4.10.0",
-    "postcss": "^7.0.6",
-    "postcss-preset-env": "^6.4.0",
     "sassdoc": "^2.5.1"
   },
   "repository": {
@@ -32,5 +28,5 @@
   "bugs": {
     "url": "https://github.com/Richienb/ros-css-styles-toolkit/issues"
   },
-  "homepage": "https://github.com/Richienb/ros-css-styles-toolkit#readme",
+  "homepage": "https://github.com/Richienb/ros-css-styles-toolkit#readme"
 }
