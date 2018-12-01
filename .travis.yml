@@ -6,9 +6,10 @@ cache: npm
 
 install:
     - npm install --global yarn
-    - yarn install --non-interactive
+    - yarn install --non-interactive --production false
+    - export PATH=$PATH:$TRAVIS_BUILD_DIR/node_modules/.bin
     
 script:
-    - npx node-sass --output-style compressed --follow --output src src
-    - npx postcss --map src
-    - npx sassdoc src
+    - sassdoc src
+    - node-sass --follow --output src src
+    - postcss src --map
