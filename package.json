@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "A CSS file that adds shortcuts to css rules.",
   "main": "ros-styles-toolkit.min.css",
+  "files": ["src/*", "README.md"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
