@@ -6,8 +6,15 @@
   "main": "ros-styles-toolkit.min.css",
   "files": ["src/*", "README.md"],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "devDependencies": {
+        "node-sass": "^4.10.0"
+        "cssnano": "^4.1.7",
+        "cssnano-preset-advanced": "^4.0.5",
+        "postcss": "7.0.6",
+        "postcss-preset-env": "6.4.0",
+  }
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Richienb/ros-css-styles-toolkit.git"
@@ -16,7 +23,7 @@
   "author": "Richie Bendall",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Richienb/ros-css-styles-toolkit/issues"
+      "url": "https://github.com/Richienb/ros-css-styles-toolkit/issues"
   },
   "homepage": "https://github.com/Richienb/ros-css-styles-toolkit#readme"
 }
