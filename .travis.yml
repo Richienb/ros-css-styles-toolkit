@@ -5,9 +5,10 @@ node_js: node
 cache: npm
 
 install:
-    - npm install -g yarn
+	- npm install -g yarn
     - yarn install --non-interactive
     
 script:
-    - npx node-sass --output-style compressed --source-map true --follow --output src src
+	- npx node-sass --output-style compressed --follow --output src src
+    - npx postcss --map src
     - npx sassdoc src
