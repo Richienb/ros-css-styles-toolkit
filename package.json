@@ -16,8 +16,9 @@
     "cssnano-preset-advanced": "^4.0.5",
     "node-sass": "^4.10.0",
     "postcss": "^7.0.6",
+    "postcss-cli": "^6.0.1",
     "postcss-preset-env": "^6.4.0",
-	"postcss-scss": "^2.0.0",
+    "postcss-scss": "^2.0.0",
     "sassdoc": "^2.5.1"
   },
   "repository": {
