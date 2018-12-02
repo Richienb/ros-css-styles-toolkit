@@ -1,4 +1,7 @@
 module.exports = {
+    map: {
+        inline: false
+    },
     plugins: {
         "postcss-preset-env": {
             stage: 0
