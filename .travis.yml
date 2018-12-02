@@ -16,7 +16,7 @@ script:
     
 before_deploy:
     - echo $TRAVIS_TAG
-    - if [ -z ${TRAVIS_TAG+x} ]; then echo "Tag variable is not set"; else npm version from-git; fi
+    - if [ -n "$TRAVIS_TAG" ]; then npm version from-git; fi
 
 deploy:
     - provider: npm
