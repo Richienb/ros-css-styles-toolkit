@@ -12,6 +12,7 @@ install:
 script:
     - sassdoc src
     - node-sass --follow --output src src
+<<<<<<< HEAD
     - postcss src --map --replace
 
 before_deploy:
@@ -26,3 +27,6 @@ deploy:
     on:
         tags: true
         repo: Richienb/ros-css-styles-toolkit
+=======
+    - find src -name '*.css' -exec postcss {} --map --replace \;
+>>>>>>> daa197c54a61bd0fd52254b710980634448ef06d
