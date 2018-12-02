@@ -13,7 +13,9 @@ script:
     - sassdoc src
     - node-sass --follow --output src src
     - find src -name "*.css" -exec postcss {} --map --replace \;
-    - if GIT_DIR=$TRAVIS_BUILD_DIR.git git rev-parse $1>/dev/null 2>&1; then npm version from-git; fi
+    
+before_deploy:
+    - npm version from-git
 
 deploy:
     - provider: npm
