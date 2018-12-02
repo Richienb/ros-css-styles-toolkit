@@ -12,8 +12,8 @@ install:
 script:
     - sassdoc src
     - node-sass --follow --output src src
-    - find src -name '*.css' -exec postcss {} --map --replace \;
-    - npm version from-git
+    - find src -name "*.css" -exec postcss {} --map --replace \;
+    - if GIT_DIR=$TRAVIS_BUILD_DIR.git git rev-parse $1>/dev/null 2>&1; then npm version from-git; fi
 
 deploy:
     - provider: npm
@@ -24,3 +24,13 @@ deploy:
       on:
           tags: true
           repo: Richienb/ros-css-styles-toolkit
+
+    - provider: pages
+      skip-cleanup: true
+      github-token:
+          secure: D3AC1/QGnbLKK8pk2ugjKmrol9NyGsFRf7ToZFTiwF2lEOzpcbS2Yx0nVbz6vYo4K4wM88Bs9KJrY93t40Nt/9AfsK8J+tN7QVESKqkv//P8sQoQzU2j1JcvfSaog4wt4MmZkQXJcxxH8yyKZm+X/MQ/VeeFWgveO8YYu1sxGseDZ1BYttgo7rE97iwDKzvS6KqTIMUgm3XPuu3qYG6uMiS1aPcoQXfBLLfL9NqAyAobdrkgGP6Xbn1IhcUQ2//OFyNaYvOQ/A7CbKInBf4zgYKPCukmnSE/FAENuQttRw1HxpXC5hnm+220GoC+j/PIOJOBWkSd2SwVoYOMOP89T76LNBJCvxqAK7moSx8mjDSduxuUuEtdnUcS26K4aXyLi6QBVxisUHIOhHTPJwXmuyu2/dCySauio6jX5pK73C7CebhptJkd1FWOKQnND2vVt4SeUCiytHKcsmOK+uPxktXr4bYDfpZdA/fpQbSlnViX+42Xt25LhK2+Wuqvdnj8w9quXV+idtGvThiq9G7gtxRjhauvevdbYnQNxKjn4RvbPmPiXcr9heoH1nZWVvHwpgD58EdkQTwTZOIPRSF47+a4grIsbLtwWO4sj6uf9EHq9J3MMPYA9vZY+vz95Ligpr44RLg6SFn6AFi+Zu3kQhX/gNpsGnUk6mKg2b7/NN8=
+      keep-history: true
+      local-dir: $TRAVIS_BUILD_DIR/sassdoc
+      committer-from-gh: true
+      on:
+           branch: master
