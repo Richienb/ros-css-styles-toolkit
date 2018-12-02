@@ -3,7 +3,7 @@
   "name": "ros-css-styles-toolkit",
   "description": "A CSS file that adds shortcuts to css rules.",
   "version": "0.0.0",
-  "main": "dist/ros-styles-toolkit.min.css",
+  "main": "dist/ros-css-styles-toolkit.css",
   "files": [
     "dist/*",
     "README.md"
