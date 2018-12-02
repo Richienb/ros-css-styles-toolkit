@@ -12,8 +12,4 @@ install:
 script:
     - sassdoc src
     - node-sass --follow --output src src
-    - find src -name '*.css' -exec echo {} \;
-
-
-
-
+    - find src -name '*.css' -exec postcss {} --map --replace \;
