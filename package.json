@@ -1,7 +1,6 @@
 {
   "title": "ROS CSS Styles Toolkit",
   "name": "ros-css-styles-toolkit",
-  "version": "1.0.0",
   "description": "A CSS file that adds shortcuts to css rules.",
   "main": "dist/ros-styles-toolkit.min.css",
   "files": [
