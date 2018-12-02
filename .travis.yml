@@ -12,5 +12,5 @@ install:
 script:
     - sassdoc src
     - node-sass --follow --output src src
-    - postcss src --map --replace
+    - postcss-scss src --map --replace
 
