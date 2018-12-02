@@ -12,21 +12,15 @@ install:
 script:
     - sassdoc src
     - node-sass --follow --output src src
-<<<<<<< HEAD
-    - postcss src --map --replace
-
-before_deploy:
+    - find src -name '*.css' -exec postcss {} --map --replace \;
     - npm version from-git
 
 deploy:
-    provider: npm
-    email: richiebendall@gmail.com
-    skip_cleanup: true
-    api_key:
-        secure: CfUtXcDVj8YbzdPkcPTVi97UR269/K1fv3qbuyQZD0dTHWSt/pna4jEDgB/VbnouDGGNybbeMs9JKQNQFaBFsnrFXtdHcQzFvBH+BSMdXIggldb8QyjG1pptkcrfUdihbloAwj7Wc2XtNv6O+sCG1tS055SvfLPcIr69A8LhS5sobYypAaOq0+mV3ONvHLhPaewZuDHt2PB/gLH6TXHFTE2M/+kAmm1Kuc0EQnVf0YKGZKv0WxbniKwsAEql8ZHdXcYpwzNYZJVW5lIBlwC/hvb/OBPc6X5TY0nwNqXXTv2T/XaOaVozuJSID+LE4HX1wVurKWG/PXmlLVdwnN+wSlVUIpk5bzNsalL0LeZgKYPa+kkWm2tsweDpEI/RTVfAHh4p0NqniKT7DInWEq9YWshQ/WupuRgn89Ikixc8AJDfGAg203KVRuvG/+1OqI9AGSKA5GShJIlVkVp1bF6cmiVk0XgEv1Nr954ehlkYO/TJDfdjXHvyrt15Ky606/VEX64aXUa8DzvZEaeGKZfONAAStly7tE4PzsQAQXK38cciVsI+KjBl4yE6l7Ma7hz0cCyyby+7CCxkiCCL2EzdWsPkr+AZQukMfEDHqG2QOMM2+lgtVNmsodTc6IBGVCrow4hXtSIY7TT1NuBqZT+3hxepI8Se8oORpDP16QyXNeQ=
-    on:
-        tags: true
-        repo: Richienb/ros-css-styles-toolkit
-=======
-    - find src -name '*.css' -exec postcss {} --map --replace \;
->>>>>>> daa197c54a61bd0fd52254b710980634448ef06d
+    - provider: npm
+      email: richiebendall@gmail.com
+      skip_cleanup: true
+      api_key:
+          secure: CfUtXcDVj8YbzdPkcPTVi97UR269/K1fv3qbuyQZD0dTHWSt/pna4jEDgB/VbnouDGGNybbeMs9JKQNQFaBFsnrFXtdHcQzFvBH+BSMdXIggldb8QyjG1pptkcrfUdihbloAwj7Wc2XtNv6O+sCG1tS055SvfLPcIr69A8LhS5sobYypAaOq0+mV3ONvHLhPaewZuDHt2PB/gLH6TXHFTE2M/+kAmm1Kuc0EQnVf0YKGZKv0WxbniKwsAEql8ZHdXcYpwzNYZJVW5lIBlwC/hvb/OBPc6X5TY0nwNqXXTv2T/XaOaVozuJSID+LE4HX1wVurKWG/PXmlLVdwnN+wSlVUIpk5bzNsalL0LeZgKYPa+kkWm2tsweDpEI/RTVfAHh4p0NqniKT7DInWEq9YWshQ/WupuRgn89Ikixc8AJDfGAg203KVRuvG/+1OqI9AGSKA5GShJIlVkVp1bF6cmiVk0XgEv1Nr954ehlkYO/TJDfdjXHvyrt15Ky606/VEX64aXUa8DzvZEaeGKZfONAAStly7tE4PzsQAQXK38cciVsI+KjBl4yE6l7Ma7hz0cCyyby+7CCxkiCCL2EzdWsPkr+AZQukMfEDHqG2QOMM2+lgtVNmsodTc6IBGVCrow4hXtSIY7TT1NuBqZT+3hxepI8Se8oORpDP16QyXNeQ=
+      on:
+          tags: true
+          repo: Richienb/ros-css-styles-toolkit
