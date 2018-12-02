@@ -15,7 +15,7 @@ script:
     - find src -name "*.css" -exec postcss {} --map --replace \;
     
 before_deploy:
-    - if [ -z ${$TRAVIS_TAG+x} ]; then echo "Tag variable is not set"; else npm version from-git; fi
+    - if [ -z ${TRAVIS_TAG+x} ]; then echo "Tag variable is not set"; else npm version from-git; fi
 
 deploy:
     - provider: npm
