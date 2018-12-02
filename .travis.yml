@@ -19,16 +19,14 @@ deploy:
     - provider: npm
       email: richiebendall@gmail.com
       skip_cleanup: true
-      api_key:
-          secure: CfUtXcDVj8YbzdPkcPTVi97UR269/K1fv3qbuyQZD0dTHWSt/pna4jEDgB/VbnouDGGNybbeMs9JKQNQFaBFsnrFXtdHcQzFvBH+BSMdXIggldb8QyjG1pptkcrfUdihbloAwj7Wc2XtNv6O+sCG1tS055SvfLPcIr69A8LhS5sobYypAaOq0+mV3ONvHLhPaewZuDHt2PB/gLH6TXHFTE2M/+kAmm1Kuc0EQnVf0YKGZKv0WxbniKwsAEql8ZHdXcYpwzNYZJVW5lIBlwC/hvb/OBPc6X5TY0nwNqXXTv2T/XaOaVozuJSID+LE4HX1wVurKWG/PXmlLVdwnN+wSlVUIpk5bzNsalL0LeZgKYPa+kkWm2tsweDpEI/RTVfAHh4p0NqniKT7DInWEq9YWshQ/WupuRgn89Ikixc8AJDfGAg203KVRuvG/+1OqI9AGSKA5GShJIlVkVp1bF6cmiVk0XgEv1Nr954ehlkYO/TJDfdjXHvyrt15Ky606/VEX64aXUa8DzvZEaeGKZfONAAStly7tE4PzsQAQXK38cciVsI+KjBl4yE6l7Ma7hz0cCyyby+7CCxkiCCL2EzdWsPkr+AZQukMfEDHqG2QOMM2+lgtVNmsodTc6IBGVCrow4hXtSIY7TT1NuBqZT+3hxepI8Se8oORpDP16QyXNeQ=
+      api_key: $npm_token
       on:
           tags: true
           repo: Richienb/ros-css-styles-toolkit
 
     - provider: pages
       skip-cleanup: true
-      github-token:
-          secure: D3AC1/QGnbLKK8pk2ugjKmrol9NyGsFRf7ToZFTiwF2lEOzpcbS2Yx0nVbz6vYo4K4wM88Bs9KJrY93t40Nt/9AfsK8J+tN7QVESKqkv//P8sQoQzU2j1JcvfSaog4wt4MmZkQXJcxxH8yyKZm+X/MQ/VeeFWgveO8YYu1sxGseDZ1BYttgo7rE97iwDKzvS6KqTIMUgm3XPuu3qYG6uMiS1aPcoQXfBLLfL9NqAyAobdrkgGP6Xbn1IhcUQ2//OFyNaYvOQ/A7CbKInBf4zgYKPCukmnSE/FAENuQttRw1HxpXC5hnm+220GoC+j/PIOJOBWkSd2SwVoYOMOP89T76LNBJCvxqAK7moSx8mjDSduxuUuEtdnUcS26K4aXyLi6QBVxisUHIOhHTPJwXmuyu2/dCySauio6jX5pK73C7CebhptJkd1FWOKQnND2vVt4SeUCiytHKcsmOK+uPxktXr4bYDfpZdA/fpQbSlnViX+42Xt25LhK2+Wuqvdnj8w9quXV+idtGvThiq9G7gtxRjhauvevdbYnQNxKjn4RvbPmPiXcr9heoH1nZWVvHwpgD58EdkQTwTZOIPRSF47+a4grIsbLtwWO4sj6uf9EHq9J3MMPYA9vZY+vz95Ligpr44RLg6SFn6AFi+Zu3kQhX/gNpsGnUk6mKg2b7/NN8=
+      github-token: $github_token
       keep-history: true
       local-dir: $TRAVIS_BUILD_DIR/sassdoc
       committer-from-gh: true
