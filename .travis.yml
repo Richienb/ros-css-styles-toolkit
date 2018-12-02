@@ -15,7 +15,6 @@ script:
     - find src -name "*.css" -exec postcss {} --map --replace \;
     
 before_deploy:
-    - echo $TRAVIS_TAG
     - if [ -n "$TRAVIS_TAG" ]; then npm version $TRAVIS_TAG; fi
 
 deploy:
