@@ -12,5 +12,5 @@ install:
 script:
     - sassdoc src
     - node-sass --follow --output src src
-    - postcss-scss src --map --replace
+    - postcss src/ros-css-styles-toolkit.css --map --replace
 
