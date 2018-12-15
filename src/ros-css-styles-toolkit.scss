@@ -115,7 +115,7 @@ i.white, svg.white {
 /// Set border to red on form validation fail
 /// @group formatting
 /// @name .invalid-border
-form.invalid-border:invalid {
+form invalid-border:invalid {
     border-style: solid;
     border-width: 1px;
     border-color: #f44336;
