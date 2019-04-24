@@ -1,7 +1,27 @@
 /// Hide something
 /// @group layout
 .hide {
-    display: none;
+    display: none !important;
+}
+
+/// Visually hide something
+/// @group layout
+.visualhide {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+/// Hide something while retaining layout
+/// @group layout
+.invisible {
+  visibility: hidden;
 }
 
 /// Remove the underline of a link
